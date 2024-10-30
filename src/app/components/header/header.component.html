@@ -1,0 +1,264 @@
+<header
+  style="
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+  "
+>
+  <div
+    style="display: flex; align-items: center; justify-content: space-between"
+  >
+    <!-- Logo -->
+    <div style="font-size: 1.5rem; font-weight: bold; color: #00695c">
+      <a href="#" style="text-decoration: none; color: inherit">Logo</a>
+    </div>
+
+    <!-- Search Bar -->
+    <div style="flex-grow: 1; max-width: 200px; margin: 0 1rem">
+      <input
+        type="text"
+        placeholder="Search here..."
+        style="
+          width: 100%;
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        "
+      />
+    </div>
+
+    <!-- Navigation Links -->
+    <nav style="display: flex; align-items: center">
+      <ul style="display: flex; list-style: none; margin: 0; padding: 0">
+        <li>
+          <a
+            href="#"
+            style="
+              margin: 0 1rem;
+              color: #333;
+              text-decoration: none;
+              font-weight: 500;
+            "
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            style="
+              margin: 0 1rem;
+              color: #333;
+              text-decoration: none;
+              font-weight: 500;
+            "
+            >Pages</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            style="
+              margin: 0 1rem;
+              color: #333;
+              text-decoration: none;
+              font-weight: 500;
+            "
+            >Insurances</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            style="
+              margin: 0 1rem;
+              color: #333;
+              text-decoration: none;
+              font-weight: 500;
+            "
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            style="
+              margin: 0 1rem;
+              color: #333;
+              text-decoration: none;
+              font-weight: 500;
+            "
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Contact Information -->
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        color: #00695c;
+        font-weight: 500;
+      "
+    >
+      <i class="fas fa-phone-alt" style="margin-right: 0.5rem"></i>
+      <span>+(111) 65 458 856</span>
+    </div>
+
+    <!-- Quote Button -->
+    <div style="margin-left: 1rem">
+      <button
+        style="
+          background-color: #00695c;
+          color: #fff;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          cursor: pointer;
+        "
+      >
+        Get A Quote
+      </button>
+    </div>
+
+    <!-- Mobile View -->
+    <div
+      (click)="toggleMenu()"
+      style="
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #333;
+        margin-left: 1rem;
+      "
+    >
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div
+  *ngIf="isMenuOpen"
+  style="
+    display: none;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    padding: 1rem;
+  "
+>
+  <ul style="list-style: none; padding: 0; margin: 0">
+    <li>
+      <a
+        href="#"
+        style="
+          display: block;
+          padding: 0.5rem 0;
+          color: #333;
+          text-decoration: none;
+        "
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        style="
+          display: block;
+          padding: 0.5rem 0;
+          color: #333;
+          text-decoration: none;
+        "
+        >Pages</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        style="
+          display: block;
+          padding: 0.5rem 0;
+          color: #333;
+          text-decoration: none;
+        "
+        >Insurances</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        style="
+          display: block;
+          padding: 0.5rem 0;
+          color: #333;
+          text-decoration: none;
+        "
+        >Blog</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        style="
+          display: block;
+          padding: 0.5rem 0;
+          color: #333;
+          text-decoration: none;
+        "
+        >Contact Us</a
+      >
+    </li>
+    <li
+      style="
+        text-align: center;
+        color: #00695c;
+        font-weight: 500;
+        padding: 0.5rem 0;
+      "
+    >
+      <i class="fas fa-phone-alt" style="margin-right: 0.5rem"></i>
+      <span>+(111) 65 458 856</span>
+    </li>
+    <li style="text-align: center">
+      <button
+        style="
+          background-color: #00695c;
+          color: #fff;
+          border: none;
+          padding: 0.5rem;
+          width: 100%;
+          font-size: 1rem;
+          border-radius: 4px;
+        "
+      >
+        Get A Quote
+      </button>
+    </li>
+  </ul>
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    .header div[style*="flex-grow"] {
+      display: none;
+    }
+    .header nav {
+      display: none;
+    }
+    .header
+      div[style*="display: flex; align-items: center; color: #00695c; font-weight: 500;"] {
+      display: none;
+    }
+    .header div[style*="margin-left: 1rem;"] {
+      display: none;
+    }
+    .header
+      div[style*="display: none; cursor: pointer; font-size: 1.5rem; color: #333; margin-left: 1rem;"] {
+      display: block;
+    }
+    div[style*="display: none; background-color: #fff; border-top: 1px solid #e0e0e0; padding: 1rem;"] {
+      display: block;
+    }
+  }
+</style>

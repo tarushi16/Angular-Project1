@@ -1,0 +1,42 @@
+<section style="display: flex; align-items: center; padding: 2rem; background-color: #f0f8f8;">
+    <div style="flex: 1; max-width: 600px; padding-right: 2rem;">
+      <h1 style="font-size: 2.5rem; font-weight: bold; color: #333;">
+        Take The Worry Out Of Life With 
+        <span style="color: #00695c;">Insurance</span> Protection
+      </h1>
+      <p style="font-size: 1rem; color: #666; margin: 1rem 0;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed placerat elementum.
+        Urna eu et purus et mi sit rhoncus. Id nisl quis arcu nulla leo nulla cras justo consectetur adipiscing elit.
+      </p>
+      <div style="display: flex; gap: 1rem;">
+        <button 
+          style="background-color: #00695c; color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer;" 
+          (click)="onGetStarted()">
+          Get Started
+        </button>
+        <button 
+          style="background-color: transparent; color: #00695c; padding: 0.75rem 1.5rem; border: 2px solid #00695c; border-radius: 4px; cursor: pointer;" 
+          (click)="onContactUs()">
+          Contact Us
+        </button>
+      </div>
+    </div>
+  
+    <div style="flex: 1; max-width: 600px; display: flex; justify-content: center; position: relative;">
+      <img src="src\assets\images\father_daughter_image.png" alt="Family" style="max-width: 100%; border-radius: 8px;" />
+    </div>
+  </section>
+  
+  <style>
+    @media (max-width: 768px) {
+      section {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+      }
+      section div[style*="max-width: 600px; padding-right: 2rem;"] {
+        padding-right: 0;
+      }
+    }
+  </style>
+  

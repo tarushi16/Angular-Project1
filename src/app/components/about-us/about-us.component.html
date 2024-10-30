@@ -1,0 +1,27 @@
+<div style="display: flex; flex-direction: column; align-items: center; padding: 2rem; max-width: 1200px; margin: auto;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <p style="color: #00A676; font-weight: bold;">ABOUT INCEP</p>
+      <h2 style="color: #2F2F2F; font-size: 2rem; font-weight: 700; text-align: center;">
+        Life Insurance That Creates Wealth For Everyone
+      </h2>
+    </div>
+  
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+      <!-- Feature Boxes -->
+      <div *ngFor="let feature of features" style="flex: 1 1 300px; display: flex; background-color: #F7F7F7; padding: 1rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 400px;">
+        <div style="margin-right: 1rem; display: flex; align-items: center; justify-content: center;">
+          <img [src]="feature.icon" [alt]="feature.title" style="width: 40px; height: 40px; background-color: #E0F4F1; border-radius: 50%; padding: 0.5rem;">
+        </div>
+        <div>
+          <h3 style="font-size: 1.2rem; color: #2F2F2F; font-weight: bold; margin-bottom: 0.5rem;">{{ feature.title }}</h3>
+          <p style="color: #6D6D6D; font-size: 0.9rem;">{{ feature.description }}</p>
+        </div>
+      </div>
+       
+      <!-- Images Section -->
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <img *ngFor="let image of images" [src]="image.src" [alt]="image.alt" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 250px;">
+      </div>
+    </div>
+  </div>
+  
